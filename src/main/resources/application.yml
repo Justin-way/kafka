@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: hello-kafka-service
+  cloud:
+    stream:
+      bindings:
+        output-out-0:
+          destination: hello-topic
+        input-in-0:
+          destination: hello-topic
+      defaultBinder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092  # 根據你 Kafka 的實際位置設定
+
+# 方便測試，設定 Web Server 端口 (可選)
+server:
+  port: 8081
