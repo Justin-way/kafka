@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class KafkaController {
 
-    private KafkaProducer producer;
+    private final KafkaProducer producer;
 
     @GetMapping("/send")
     public String send(@RequestParam String message) {

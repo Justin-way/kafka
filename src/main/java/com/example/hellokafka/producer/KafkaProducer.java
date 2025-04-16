@@ -10,7 +10,7 @@ import org.springframework.cloud.stream.function.StreamBridge;
 @RequiredArgsConstructor
 public class KafkaProducer {
 
-    private StreamBridge streamBridge;
+    private final StreamBridge streamBridge;
 
 
     public void sendMessage(String message) {
